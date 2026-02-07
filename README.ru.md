@@ -16,12 +16,16 @@
 В корне проекта:
 
 ```bash
-git clone ...
+sudo apt update && sudo apt upgrade
+git clone https://github.com/dmk44/notify_bot.git
+cd notify_bot
 pip install .
 ```
 На Windows этого достаточно.
 На Linux и macOS может потребоваться установка в виртуальное окружение
 или использование `pipx`.
+
+**Если ставите через pipx:** если pipx пишет, что каталог «not on your PATH», выполните `pipx ensurepath`, затем перезапустите терминал (или выполните `source ~/.bashrc`).
 
 ---
 

@@ -7,7 +7,7 @@ A simple Python CLI for sending messages through your Telegram bot.
 **What does it do?** 
 
 *notify-bot* turns your bot into a pager:  
-the operator works from Bash / PowerShell, and users receive notifications in Telegram.
+the operator works from *Bash / PowerShell*, and users receive notifications in Telegram.
 
 ## Requirements
 - Python **3.9+**
@@ -15,12 +15,16 @@ the operator works from Bash / PowerShell, and users receive notifications in Te
 ## Installation
 From the project root:
 ```bash
-git clone ...
+sudo apt update && sudo apt upgrade
+git clone https://github.com/dmk44/notify_bot.git
+cd notify_bot
 pip install .
 ```
 
 On Windows this is usually enough. 
 On Linux and macOS you may need to install inside a virtual environment or use `pipx`.
+
+**If you use pipx:** if you see "not on your PATH", run `pipx ensurepath`, then restart the terminal (or run `source ~/.bashrc`).
 
 After installation, the following console commands are available:
 
@@ -34,7 +38,7 @@ After installation, the following console commands are available:
 1. Get a token from [@BotFather](https://t.me/BotFather).
 2. Run:
 
-```bash
+```sh
 set-token
 ```
 
@@ -82,7 +86,8 @@ Encrypting the token without a separate secret usually does not provide meaningf
 
 ### Linux / macOS
 You may restrict access to the directory and files:
-```bash
+
+```sh
 chmod 700 ~/.notify-bot
 chmod 600 ~/.notify-bot/config.ini
 chmod 600 ~/.notify-bot/users.json
